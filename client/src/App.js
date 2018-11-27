@@ -41,7 +41,7 @@ class App extends React.Component {
     fetch('/listTopUrls', {credentials: 'same-origin', method: 'get', headers: {"Content-Type": "application/json"}})
       .then(results => results.json())
       .then(results => {
-        this.setState({topUrls: results.map(url => `${url.abbreviated_url} (https://www.${url.original_url})`)})
+        this.setState({topUrls: results.map(url => `${window.location.href}${url.abbreviated_url} (https://www.${url.original_url})`)})
       });
   }
 
@@ -51,7 +51,7 @@ class App extends React.Component {
       <div className={style.heading}><h1>Sample URL Shortener Project</h1></div>
       <div>
         <h2>Add a URL</h2>
-        <input ref={input => this.input = input} className={style.urlBox} type='text' placeholer='Enter your URL here' onChange={event => { this.setState({url: event.target.value}) } } value={this.state.url}></input>
+        <input ref={input => this.input = input} className={style.urlBox} type='text' placeholer='Enter your URL here' onChange={event => { this.setState({url: event.target.value, isAbbreviated: false}) } } value={this.state.url}></input>
         { this.state.isAbbreviated ?
           <button className={style.urlButton} onClick={(evt) => {this.copyToClipboard(evt)}}>Copy</button> :
           <button className={style.urlButton} onClick={() => {this.postUrl()}}>Enter</button>

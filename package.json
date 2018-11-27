@@ -35,7 +35,7 @@
   },
   "scripts": {
     "client": "webpack --config webpack.config.js",
-    "dev": "set_local_vars.sh && nodemon --watch server server.js",
+    "dev": "./set_local_vars.sh && nodemon --watch server server.js",
     "start": "knex migrate:latest && node server.js",
     "postinstall": "webpack --config webpack.prod.js"
   }
