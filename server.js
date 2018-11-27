@@ -30,7 +30,7 @@ function childProcess() {
 
   const app = express();
 
-  const client = redis.createClient();
+  const client = redis.createClient(process.env.REDIS_URL);
 
   app.use(express.json());
   app.use(express.urlencoded({extended: false}));
