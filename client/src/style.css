@@ -1,0 +1,84 @@
+.main {
+    font-family: 'Helvetica';
+    color: #dfe6e9;
+    padding: 4px 20px;
+}
+
+.main div {
+    margin-bottom: 32px;
+}
+
+.main h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.main h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+
+.heading {
+}
+
+.urlBox {
+    font-size: 16px;
+    width: 420px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    margin: 0;
+}
+
+.topUrls {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 40px;
+}
+
+.topUrls h2 {
+    margin-bottom: 0;
+}
+
+.topUrls ul {
+    list-style: none;
+    display: inline;
+    padding-top: 0;
+}
+
+.topUrls ul li {
+    padding-bottom: 12px;
+    padding-left: 4px;
+}
+
+.invalid {
+    font-size: 24px;
+    background: #6c5ce7;
+    width: 106%;
+    margin-left: -3%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.invalidMsg {
+    padding: 20px;
+}
+
+.urlButton {
+    background-color:#a29bfe;
+    border-radius:5px;
+    border:1px solid #4e6096;
+    display:inline-block;
+    cursor:pointer;
+    color:#dfe6e9;
+    font-family:Arial;
+    font-size:16px;
+    padding:5px 16px;
+    margin-left: 3px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-decoration:none;
+}
+.urlButton:hover {
+    background:#6c5ce7;
+}
